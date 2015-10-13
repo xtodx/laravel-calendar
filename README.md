@@ -1,7 +1,7 @@
-Laravel 4 Calendar
+Laravel 5 Calendar
 ==================
 
-Flexible Calendar for Laravel 4, supports Month, Week and Day Views and multiple events per date.
+Flexible Calendar for Laravel 5, supports Month, Week and Day Views and multiple events per date.
 
 To change the view type dynamically, pass in a GET variable called 'cv' (calendar view) with either a 'week' or 'day' value. Day and Week views are split into 30 minute interval rows. 
 
@@ -9,7 +9,7 @@ Install:
 
 Add this to "require" in composer.json:
 
-		"makzumi/calendar": "dev-master"
+		"makzumi/calendar": "dev-laravel5"
 
 After that run a composer update, then in app.php add:
 
