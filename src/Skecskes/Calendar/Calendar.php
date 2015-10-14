@@ -1,5 +1,5 @@
 <?php
-namespace Makzumi\Calendar;
+namespace Skecskes\Calendar;
 
 class Calendar {
 	//SORRY FOR LACK OF DOCUMENTATION, I'LL GET TO IT SOON

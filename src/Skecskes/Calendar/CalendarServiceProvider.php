@@ -1,5 +1,5 @@
 <?php
-namespace Makzumi\Calendar;
+namespace Skecskes\Calendar;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +18,7 @@ class CalendarServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-		$this->package('makzumi/calendar');
+		$this->package('skecskes/calendar');
 	}
 
 	/**
@@ -34,7 +34,7 @@ class CalendarServiceProvider extends ServiceProvider {
 		
 		$this->app->booting(function() {
 			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('Calendar', 'Makzumi\Calendar\Facades\Calendar');
+			$loader->alias('Calendar', 'Skecskes\Calendar\Facades\Calendar');
 		});
 	}
 
