@@ -1,5 +1,4 @@
-<?php
-namespace Skecskes\Calendar;
+<?php namespace Skecskes\Calendar;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -18,7 +17,7 @@ class CalendarServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function boot() {
-		$this->package('skecskes/calendar');
+		//
 	}
 
 	/**
@@ -27,15 +26,12 @@ class CalendarServiceProvider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		//
-		$this->app['calendar'] = $this->app->share(function($app) {
-			return new Calendar;
+
+		$this->app['calendar'] = $this->app->share(function() {
+			return new Calendar();
 		});
-		
-		$this->app->booting(function() {
-			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('Calendar', 'Skecskes\Calendar\Facades\Calendar');
-		});
+
+        $this->app->alias('Calendar','Skecskes\Calendar\Calendar');
 	}
 
 	/**
@@ -44,7 +40,7 @@ class CalendarServiceProvider extends ServiceProvider {
 	 * @return array
 	 */
 	public function provides() {
-		return array('calendar');
+		return ['calendar'];
 	}
 
 }

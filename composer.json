@@ -16,7 +16,7 @@
 	"autoload": {
 		"classmap": [],
 		"psr-0": {
-			"Skecskes\\Calendar\\": "src/"
+			"Skecskes\\Calendar": "src/"
 		}
 	},
 	"minimum-stability": "stable"
