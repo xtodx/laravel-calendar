@@ -13,11 +13,10 @@
 		"php": ">=5.3.0",
 		"illuminate/support": "~5"
 	},
-	"autoload": {
-		"classmap": [],
-		"psr-0": {
-			"Skecskes\\Calendar": "src/"
-		}
-	},
+    "autoload": {
+        "psr-4": {
+          "Skecskes\\Calendar\\": "src/"
+        }
+    },
 	"minimum-stability": "stable"
 }
