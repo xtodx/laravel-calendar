@@ -9,7 +9,7 @@ class CalendarServiceProvider extends ServiceProvider {
 	 *
 	 * @var bool
 	 */
-	protected $defer = false;
+	protected $defer = true;
 
 	/**
 	 * Bootstrap the application events.
@@ -27,11 +27,9 @@ class CalendarServiceProvider extends ServiceProvider {
 	 */
 	public function register() {
 
-		$this->app['calendar'] = $this->app->share(function() {
-			return new Calendar();
-		});
-
-        $this->app->alias('Calendar','Skecskes\Calendar\Calendar');
+        $this->app->singleton('calendar', function() {
+            return new Calendar();
+        });
 	}
 
 	/**
@@ -40,7 +38,7 @@ class CalendarServiceProvider extends ServiceProvider {
 	 * @return array
 	 */
 	public function provides() {
-		return ['calendar'];
+		return [];
 	}
 
 }
