@@ -4,41 +4,32 @@ use Illuminate\Support\ServiceProvider;
 
 class CalendarServiceProvider extends ServiceProvider {
 
-	/**
-	 * Indicates if loading of the provider is deferred.
-	 *
-	 * @var bool
-	 */
-	protected $defer = true;
+    /**
+     * Indicates if loading of the provider is deferred.
+     *
+     * @var bool
+     */
+    protected $defer = true;
 
-	/**
-	 * Bootstrap the application events.
-	 *
-	 * @return void
-	 */
-	public function boot() {
-		//
-	}
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register() {
 
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register() {
-
-        $this->app->singleton('calendar', function() {
-            return new Calendar();
+        $this->app->singleton('Skecskes\Calendar\Calendar', function($app) {
+            return new Calendar($app['config']['calendar']);
         });
-	}
+    }
 
-	/**
-	 * Get the services provided by the provider.
-	 *
-	 * @return array
-	 */
-	public function provides() {
-		return [];
-	}
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides() {
+        return ['Skecskes\Calendar\Calendar'];
+    }
 
 }
