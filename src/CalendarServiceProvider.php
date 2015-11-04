@@ -1,4 +1,6 @@
-<?php namespace Skecskes\Calendar;
+<?php
+
+namespace Skecskes\Calendar;
 
 use Illuminate\Support\ServiceProvider;
 
