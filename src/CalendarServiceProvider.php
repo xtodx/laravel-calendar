@@ -1,6 +1,6 @@
 <?php
 
-namespace Skecskes\Calendar;
+namespace Makzumi\Calendar;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,7 +20,7 @@ class CalendarServiceProvider extends ServiceProvider {
      */
     public function register() {
 
-        $this->app->singleton('Skecskes\Calendar\Calendar', function($app) {
+        $this->app->singleton('Makzumi\Calendar\Calendar', function($app) {
             return new Calendar($app['config']['calendar']);
         });
     }
@@ -31,7 +31,7 @@ class CalendarServiceProvider extends ServiceProvider {
      * @return array
      */
     public function provides() {
-        return ['Skecskes\Calendar\Calendar'];
+        return ['Makzumi\Calendar\Calendar'];
     }
 
 }

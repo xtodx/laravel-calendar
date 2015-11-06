@@ -1,6 +1,6 @@
 <?php
 
-namespace Skecskes\Calendar;
+namespace Makzumi\Calendar;
 
 class Calendar {
 	//SORRY FOR LACK OF DOCUMENTATION, I'LL GET TO IT SOON

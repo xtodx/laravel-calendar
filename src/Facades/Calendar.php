@@ -1,6 +1,6 @@
 <?php
 
-namespace Skecskes\Calendar\Facades;
+namespace Makzumi\Calendar\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

@@ -1,5 +1,5 @@
 {
-	"name": "skecskes/calendar",
+	"name": "makzumi/calendar",
 	"type": "library",
 	"description": "Laravel 5 Flexible Calendar",
 	"keywords": ["laravel","calendar", "events"],
@@ -15,7 +15,7 @@
 	},
     "autoload": {
         "psr-4": {
-          "Skecskes\\Calendar\\": "src/"
+          "Makzumi\\Calendar\\": "src/"
         }
     },
 	"minimum-stability": "stable"
