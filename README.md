@@ -26,6 +26,14 @@ Add this to "require" in composer.json:
 
 	"makzumi/calendar": "dev-laravel5"
 
+Add this to "repositories" in composer.json:
+
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:skecskes/laravel-calendar.git"
+        }
+    ],
 
 After that run a composer update, then in /config/app.php add this line providers array:
 
