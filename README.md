@@ -12,7 +12,7 @@ Add this to "require" in composer.json:
 
 After that run a composer update, then in app.php add:
 
- 
+
 	'providers' => array(
 		...,
 			'Makzumi\Calendar\CalendarServiceProvider',
@@ -37,7 +37,30 @@ Add this to "repositories" in composer.json:
 
 After that run a composer update, then in /config/app.php add this line providers array:
 
-		
+
+	'providers' => array(
+		...,
+			Makzumi\Calendar\CalendarServiceProvider::class,
+		),
+
+
+## Adding service to providers
+
+
+## Usage
+
+
+
+## Install for Laravel 5:
+
+Add this to "require" in composer.json:
+
+	"makzumi/calendar": "dev-laravel5"
+
+
+After that run a composer update, then in /config/app.php add this line providers array:
+
+
 	'providers' => array(
 		...,
 			Makzumi\Calendar\CalendarServiceProvider::class,
