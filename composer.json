@@ -1,12 +1,12 @@
 {
-	"name": "makzumi/calendar",
+	"name": "skecskes/calendar",
 	"type": "library",
 	"description": "Laravel 5 Flexible Calendar",
-	"keywords": ["laravel","calendar", "events"],
+	"keywords": ["laravel", "calendar", "events"],
 	"authors": [
 		{
-			"name": "Ammar Almakzumi",
-			"email": "info@makzumi.com"
+			"name": "Stefan Kecskes",
+			"email": "info@skey.uk"
 		}
 	],
 	"require": {
@@ -15,7 +15,7 @@
 	},
     "autoload": {
         "psr-4": {
-          "Makzumi\\Calendar\\": "src/"
+          "Skecskes\\Calendar\\": "src/"
         }
     },
 	"minimum-stability": "stable"

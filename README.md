@@ -1,74 +1,24 @@
-# Laravel 4/5 Calendar
+# Laravel 5 Calendar
 
-Flexible Calendar for Laravel 4 and 5, supports Month, Week and Day Views and multiple events per date.
+Flexible Calendar for Laravel 5, supports Month, Week and Day Views and multiple events per date.
 
 To change the view type dynamically, pass in a GET variable called 'cv' (calendar view) with either a 'week' or 'day' value. Day and Week views are split into 30 minute interval rows. 
 
-## Install for Laravel 4:
+**For Laravel 4 use [makzumi/laravel-calendar](https://github.com/makzumi/laravel-calendar)**
 
-Add this to "require" in composer.json:
+## Installation instructions for Laravel 5:
 
-		"makzumi/calendar": "dev-master"
+Add this to "require" section in composer.json:
 
-After that run a composer update, then in app.php add:
+	"skecskes/calendar": "~0.2.*"
 
-
-	'providers' => array(
-		...,
-			'Makzumi\Calendar\CalendarServiceProvider',
-		),
-
-
-
-## Install for Laravel 5:
-
-Add this to "require" in composer.json:
-
-	"makzumi/calendar": "dev-laravel5"
-
-Add this to "repositories" in composer.json:
-
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:skecskes/laravel-calendar.git"
-        }
-    ],
-
-After that run a composer update, then in /config/app.php add this line providers array:
+After that run a `composer update`, and then in /config/app.php add this line to providers array:
 
 
 	'providers' => array(
 		...,
-			Makzumi\Calendar\CalendarServiceProvider::class,
+			Skecskes\Calendar\CalendarServiceProvider::class,
 		),
-
-
-## Adding service to providers
-
-
-## Usage
-
-
-
-## Install for Laravel 5:
-
-Add this to "require" in composer.json:
-
-	"makzumi/calendar": "dev-laravel5"
-
-
-After that run a composer update, then in /config/app.php add this line providers array:
-
-
-	'providers' => array(
-		...,
-			Makzumi\Calendar\CalendarServiceProvider::class,
-		),
-
-
-## Adding service to providers
-
 
 ## Usage
 
