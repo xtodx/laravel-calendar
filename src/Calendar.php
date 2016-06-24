@@ -4,8 +4,8 @@ namespace Skecskes\Calendar;
 
 class Calendar {
 	//SORRY FOR LACK OF DOCUMENTATION, I'LL GET TO IT SOON
-	private $day_lbls = config('calendar.day_labels');
-	private $month_lbls = config('calendar.month_labels');
+	private $day_lbls = array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+	private $month_lbls = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
 	private $days_month = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 	private $week_days = array();
 	private $day;
@@ -40,6 +40,7 @@ class Calendar {
 	private $today;
 
 	public function __construct() {
+		$this->setConfiguration(config('calendar'));
 		$this->day = date('d');
 		$this->month = date('n');
 		$this->year = date('Y');
@@ -48,6 +49,12 @@ class Calendar {
 
 	public function make() {
 		return new static();
+	}
+
+	public function setConfiguration(array $config)
+	{
+		$this->day_lbls = isset($config['calendar']['day_labels']) ? $config['calendar']['day_labels'] : $this->day_lbls;
+		$this->month_lbls = isset($config['calendar']['month_labels']) ? $config['calendar']['month_labels'] : $this->month_lbls;
 	}
 
 	public function showNav($show) {
@@ -241,8 +248,8 @@ class Calendar {
 
 		$this->week_days = array();
 		$mlen = $this->days_month[intval($this->month) - 1];
-		if ($this->month == 2 && ((($this->year % 4) == 0) && ((($this->year % 100) != 0) || (($this->year % 400) == 0)))) { 
-			$mlen = $mlen + 1; 
+		if ($this->month == 2 && ((($this->year % 4) == 0) && ((($this->year % 100) != 0) || (($this->year % 400) == 0)))) {
+			$mlen = $mlen + 1;
 		}
 		$h = "<tr class='" . $this->labelsClass . "'>";
 		$h .= "<td>&nbsp;</td>";
@@ -279,7 +286,7 @@ class Calendar {
 		if ($this->month == 2 && ((($this->year % 4) == 0) && ((($this->year % 100) != 0) || (($this->year % 400) == 0)))) {
 			$monthLength = $monthLength + 1;
 		}
-        	$h = "<tr>";
+		$h = "<tr>";
 		for ($i = $startingDay == 7 ? 1 : 0; $i < 9; $i++) {
 			for ($j = 0; $j <= 6; $j++) {
 				$curr_date = $this->getDayDate($day);

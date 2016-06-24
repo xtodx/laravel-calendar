@@ -31,7 +31,7 @@ class CalendarServiceProvider extends ServiceProvider {
     public function boot()
     {
         $config = __DIR__ . '/config/calendar.php';
-        $this->mergeConfigFrom($config, 'calendar');
+        //$this->mergeConfigFrom($config, 'calendar');
         $this->publishes([$config => config_path('calendar.php')]);
     }
 
