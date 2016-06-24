@@ -4,7 +4,7 @@ namespace Skecskes\Calendar;
 
 class Calendar {
 	//SORRY FOR LACK OF DOCUMENTATION, I'LL GET TO IT SOON
-	private $day_lbls = array('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat');
+	private $day_lbls = config('calendar.day_labels');
 	private $month_lbls = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
 	private $days_month = array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
 	private $week_days = array();

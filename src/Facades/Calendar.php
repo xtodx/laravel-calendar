@@ -1,6 +1,4 @@
-<?php
-
-namespace Skecskes\Calendar\Facades;
+<?php namespace Skecskes\Calendar\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -12,7 +10,7 @@ class Calendar extends Facade {
      * @return string
      */
 	protected static function getFacadeAccessor() {
-		return 'calendar';
+		return 'Skecskes\Calendar\Calendar';
 	}
 
 }

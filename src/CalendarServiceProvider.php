@@ -1,6 +1,4 @@
-<?php
-
-namespace Skecskes\Calendar;
+<?php namespace Skecskes\Calendar;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -21,8 +19,18 @@ class CalendarServiceProvider extends ServiceProvider {
     public function register() {
 
         $this->app->singleton('Skecskes\Calendar\Calendar', function($app) {
-            return new Calendar($app['config']['calendar']);
+            return new Calendar();
         });
+    }
+
+    /**
+     *
+     */
+    public function boot()
+    {
+        $this->publishes([
+            __DIR__ . '/config/calendar.php' => config_path('calendar.php'),
+        ]);
     }
 
     /**

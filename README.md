@@ -10,7 +10,7 @@ To change the view type dynamically, pass in a GET variable called 'cv' (calenda
 
 Add this to "require" section in composer.json:
 
-	"skecskes/calendar": "~0.2.*"
+	"skecskes/calendar": "0.2.*"
 
 After that run a `composer update`, and then in /config/app.php add this line to providers array:
 
