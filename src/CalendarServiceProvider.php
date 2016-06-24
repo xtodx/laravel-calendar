@@ -30,7 +30,7 @@ class CalendarServiceProvider extends ServiceProvider {
     {
         $this->publishes([
             __DIR__ . '/config/calendar.php' => config_path('calendar.php'),
-        ]);
+        ], 'config');
     }
 
     /**

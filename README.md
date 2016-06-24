@@ -37,7 +37,8 @@ To use, create a new Calender instance and generate it, below you'll find severa
 			),
 		);
 
-		$cal = Calendar::make();
+		$cal = Skecskes\Calendar\Facades\Calendar::make(); // create instance
+
 		/**** OPTIONAL METHODS ****/
 		$cal->setDate(Input::get('cdate')); //Set starting date
 		$cal->setBasePath('/dashboard'); // Base path for navigation URLs
