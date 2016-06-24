@@ -24,13 +24,15 @@ class CalendarServiceProvider extends ServiceProvider {
     }
 
     /**
+     * Bootstrap the configuration
      *
+     * @return void
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/config/calendar.php' => config_path('calendar.php'),
-        ], 'config');
+        $config = __DIR__ . '/config/calendar.php';
+        $this->mergeConfigFrom($config, 'calendar');
+        $this->publishes([$config => config_path('calendar.php')]);
     }
 
     /**
