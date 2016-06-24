@@ -41,10 +41,6 @@ class Calendar {
 
 	public function __construct() {
 		$this->setConfiguration(config('calendar'));
-		$this->day = date('d');
-		$this->month = date('n');
-		$this->year = date('Y');
-		$this->today = date('Y-m-d');
 	}
 
 	public function make() {
@@ -53,8 +49,13 @@ class Calendar {
 
 	public function setConfiguration(array $config)
 	{
-		$this->day_lbls = isset($config['calendar']['day_labels']) ? $config['calendar']['day_labels'] : $this->day_lbls;
-		$this->month_lbls = isset($config['calendar']['month_labels']) ? $config['calendar']['month_labels'] : $this->month_lbls;
+		$this->day = date('d');
+		$this->month = date('n');
+		$this->year = date('Y');
+		$this->today = date('Y-m-d');
+		$this->day_lbls = isset($config['day_labels']) ? $config['day_labels'] : $this->day_lbls;
+		$this->month_lbls = isset($config['month_labels']) ? $config['month_labels'] : $this->month_lbls;
+		$this->days_month = isset($config['days_month']) ? $config['days_month'] : $this->days_month;
 	}
 
 	public function showNav($show) {
