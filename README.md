@@ -20,6 +20,12 @@ After that run a `composer update`, and then in /config/app.php add this line to
 			Skecskes\Calendar\CalendarServiceProvider::class,
 		),
 
+If you want to change some of the default values of calendar, first publish the configuration with
+
+    php artisan vendor:publish
+
+This will create new configuration file in your app `config/calendar.php` where you can overwrite default values.
+
 ## Usage
 
 To use, create a new Calender instance and generate it, below you'll find several options to customize it as well:
