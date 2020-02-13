@@ -1,7 +1,7 @@
 {
-	"name": "skecskes/calendar",
+	"name": "xtodx/calendar",
 	"type": "library",
-	"description": "Laravel 5 Flexible Calendar",
+	"description": "Laravel 6 Flexible Calendar",
 	"keywords": ["laravel", "calendar", "events"],
 	"authors": [
 		{
@@ -10,8 +10,8 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3.0",
-		"illuminate/support": "~5"
+		"php": ">=7.2.0",
+		"illuminate/support": "~6"
 	},
     "autoload": {
         "psr-4": {
