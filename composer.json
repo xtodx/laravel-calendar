@@ -15,7 +15,7 @@
 	},
     "autoload": {
         "psr-4": {
-          "Skecskes\\Calendar\\": "src/"
+          "Xtodx\\Calendar\\": "src/"
         }
     },
 	"minimum-stability": "stable"
